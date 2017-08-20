@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>checked demo</title>
+  <style>
+  div {
+    color: red;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+ 
+<form> 
+<h1>Pizza Size</h1>
+  <p>
+    11-inch ($10) <input type="checkbox" name="pizza size" value="11"><br>
+    14-inch ($13) <input type="checkbox" name="pizza size" value="14"><br>
+    20-inch ($20) <input type="checkbox" name="pizza size" value="20"><br>
+    </p>
+
+<h1>Base (included)</h1>
+<p>
+Tomato <input type="checkbox" name="base" value="Tomato"><br>
+Pesto <input type="checkbox" name="base" value="Pesto"><br>
+Alfredo <input type="checkbox" name="base" value="Alfredo"><br>
+</p>
+
+<h1>Cheese (one included, $2 extra per topping)</h1>
+<p>
+Mozzarella <input type="checkbox" name="cheese" value="Mozzarella"><br>
+Parmesan <input type="checkbox" name="cheese" value="Parmesan"><br>
+Fontina <input type="checkbox" name="cheese" value="Fontina"><br>
+</p>
+
+<h1>Vegetables (two included, $1 extra per topping)</h1>
+<p>
+Bell Peppers <input type="checkbox" name="vegetables" value="Bell Peppers"><br>
+Garlic <input type="checkbox" name="vegetables" value="Garlic"><br>
+Jalepeno <input type="checkbox" name="vegetables" value="Jalepeno"><br>
+Mushrooms <input type="checkbox" name="vegetables" value="Mushrooms"><br>
+Onions <input type="checkbox" name="vegetables" value="Onions"><br>
+Olives <input type="checkbox" name="vegetables" value="Olives"><br>
+Tomato <input type="checkbox" name="vegetables" value="Tomato"><br>
+Sundried Tomato <input type="checkbox" name="vegetables" value="Sundried Tomato"><br>
+</p>
+
+<h1> Meat (one included, $3 extra per topping)</h1>
+<p>
+Chicken <input type="checkbox" name="meat" value="Chicken"><br>
+Pepperoni <input type="checkbox" name="meat" value="Pepperoni"><br>
+Sausage <input type="checkbox" name="meat" value="Sausage"><br>
+</p>
+</form>
+
+<form>
+<div></div>
+ 
+<script>
+var countChecked = function() {
+  var n = $( "input:checked" ).length;
+  $( "div" ).text( n + (n === 1 ? " is" : " are") + " checked!" );
+};
+countChecked();
+ 
+$( "input[type=checkbox]" ).on( "click", countChecked );
+</script>
+ 
+</body>
+</html>
