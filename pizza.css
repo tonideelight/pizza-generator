@@ -1,0 +1,47 @@
+body {
+    background-image: url("https://i.pinimg.com/originals/29/eb/a8/29eba8cdd1b03cb838ae493cf98882f6.jpg");
+    background-color: black;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+}
+h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: lightpink;
+    padding-left: 120px;
+}
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: lightgrey;
+    padding-left: 120px;
+}
+
+h3 {
+    font-family: Tahoma;
+    color:  whitesmoke;
+    padding-left: 120px;
+}
+
+p {
+    font-family: Tahoma;
+    color: lightblue;
+    font-size: 18px;
+    padding-left: 120px;
+    
+}
+
+.box {
+  float: left;
+  padding-left: 120px;
+  
+}
+#total {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+
+}
+#pizza-toppings{
+    float:left;
+    padding-left: 120px;
+}

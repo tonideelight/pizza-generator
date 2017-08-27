@@ -1,65 +1,76 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
-  <title>checked demo</title>
-  <style>
-  div {
-    color: red;
-  }
-  </style>
+
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-  
+  <link rel="stylesheet" href="pizza.css">
 </head>
+
 <body>
- 
-<form id="pizza-toppings"> 
-<h1>Pizza Size</h1>
-  <p>
-    11-inch ($10) <input type="radio" name="size" value="10"><br>
-    14-inch ($13) <input type="radio" name="size" value="13"><br>
-    20-inch ($20) <input type="radio" name="size" value="20"><br>
+  <h1>Pizza Topping Generator</h1>
+  <form id="pizza-toppings">
+    <h2>Pizza Size</h2>
+    <p>
+      <input checked type="radio" name="size" value="Small">11-inch (small - $10)<br>
+      <input type="radio" name="size" value="Medium">14-inch (medium - $13)<br>
+      <input type="radio" name="size" value="Large">20-inch (large - $20)<br>
     </p>
 
-<h1>Base (included)</h1>
-<p>
-Tomato <input type="radio" name="base" value="Tomato"><br>
-Pesto <input type="radio" name="base" value="Pesto"><br>
-Alfredo <input type="radio" name="base" value="Alfredo"><br>
-</p>
+    <h2>Base (included)</h2>
+    <p>
+      <input type="radio" name="base" value="Tomato">Tomato<br>
+      <input type="radio" name="base" value="Pesto">Pesto <br>
+      <input type="radio" name="base" value="Alfredo">Alfredo<br>
+    </p>
 
-<h1>Cheese (one included, $2 extra per topping)</h1>
-<p>
-Mozzarella <input type="checkbox" name="cheese" value="Mozzarella"><br>
-Parmesan <input type="checkbox" name="cheese" value="Parmesan"><br>
-Fontina <input type="checkbox" name="cheese" value="Fontina"><br>
-</p>
+    <h2>Cheese (one included, $2 extra per topping)</h2>
+    <p>
+      <input type="checkbox" name="cheese" value="Mozzarella">Mozzarella<br>
+      <input type="checkbox" name="cheese" value="Parmesan">Parmesan<br>
+      <input type="checkbox" name="cheese" value="Fontina">Fontina<br>
+    </p>
 
-<h1>Vegetables (two included, $1 extra per topping)</h1>
-<p>
-Bell Peppers <input type="checkbox" name="vegetables" value="Bell Peppers"><br>
-Garlic <input type="checkbox" name="vegetables" value="Garlic"><br>
-Jalepeno <input type="checkbox" name="vegetables" value="Jalepeno"><br>
-Mushrooms <input type="checkbox" name="vegetables" value="Mushrooms"><br>
-Onions <input type="checkbox" name="vegetables" value="Onions"><br>
-Olives <input type="checkbox" name="vegetables" value="Olives"><br>
-Tomato <input type="checkbox" name="vegetables" value="Tomato"><br>
-Sundried Tomato <input type="checkbox" name="vegetables" value="Sundried Tomato"><br>
-</p>
+    <h2>Vegetables (two included, $1 extra per topping)</h2>
+    <p>
+      <input type="checkbox" name="vegetables" value="Bell Peppers">Bell Peppers <br>
+      <input type="checkbox" name="vegetables" value="Garlic">Garlic<br>
+      <input type="checkbox" name="vegetables" value="Jalepeno">Jalepeno<br>
+      <input type="checkbox" name="vegetables" value="Mushrooms">Mushrooms<br>
+      <input type="checkbox" name="vegetables" value="Onions">Onions<br>
+      <input type="checkbox" name="vegetables" value="Olives">Olives<br>
+      <input type="checkbox" name="vegetables" value="Tomato">Tomato<br>
+      <input type="checkbox" name="vegetables" value="Sundried Tomato">Sundried Tomato<br>
+    </p>
 
-<h1> Meat (one included, $3 extra per topping)</h1>
-<p>
-Chicken <input type="checkbox" name="meat" value="Chicken"><br>
-Pepperoni <input type="checkbox" name="meat" value="Pepperoni"><br>
-Sausage <input type="checkbox" name="meat" value="Sausage"><br>
-</p>
-</form>
-
-<form>
-<div id="total">
+    <h2> Meat (one included, $3 extra per topping)</h2>
+    <p>
+      <input type="checkbox" name="meat" value="Chicken">Chicken<br>
+      <input type="checkbox" name="meat" value="Pepperoni">Pepperoni<br>
+      <input type="checkbox" name="meat" value="Sausage">Sausage<br>
+    </p>
+  </form>
 
 
-</div>
-<script src="pizza.js"></script>
+  <div class="box">
+    <h3>Size</h3>
+    <p id="selected-size" </p>
+
+      <h3>Base</h3>
+      <p id="selected-base"></p>
+
+      <h3>Cheese</h3>
+      <p id="selected-cheese"></p>
+
+      <h3>Vegetables</h3>
+      <p id="selected-vegetable"></p>
+
+      <h3>Meat</h3>
+      <p id="selected-meat"></p>
+      <h3>Total Price:  <span id="total"> </span></h3>
+  </div>
+  <script src="pizza.js"></script>
 </body>
+
 </html>
