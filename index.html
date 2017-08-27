@@ -9,22 +9,23 @@
   }
   </style>
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  
 </head>
 <body>
  
-<form> 
+<form id="pizza-toppings"> 
 <h1>Pizza Size</h1>
   <p>
-    11-inch ($10) <input type="checkbox" name="pizza size" value="11"><br>
-    14-inch ($13) <input type="checkbox" name="pizza size" value="14"><br>
-    20-inch ($20) <input type="checkbox" name="pizza size" value="20"><br>
+    11-inch ($10) <input type="radio" name="size" value="10"><br>
+    14-inch ($13) <input type="radio" name="size" value="13"><br>
+    20-inch ($20) <input type="radio" name="size" value="20"><br>
     </p>
 
 <h1>Base (included)</h1>
 <p>
-Tomato <input type="checkbox" name="base" value="Tomato"><br>
-Pesto <input type="checkbox" name="base" value="Pesto"><br>
-Alfredo <input type="checkbox" name="base" value="Alfredo"><br>
+Tomato <input type="radio" name="base" value="Tomato"><br>
+Pesto <input type="radio" name="base" value="Pesto"><br>
+Alfredo <input type="radio" name="base" value="Alfredo"><br>
 </p>
 
 <h1>Cheese (one included, $2 extra per topping)</h1>
@@ -55,17 +56,10 @@ Sausage <input type="checkbox" name="meat" value="Sausage"><br>
 </form>
 
 <form>
-<div></div>
- 
-<script>
-var countChecked = function() {
-  var n = $( "input:checked" ).length;
-  $( "div" ).text( n + (n === 1 ? " is" : " are") + " checked!" );
-};
-countChecked();
- 
-$( "input[type=checkbox]" ).on( "click", countChecked );
-</script>
- 
+<div id="total">
+
+
+</div>
+<script src="pizza.js"></script>
 </body>
 </html>
